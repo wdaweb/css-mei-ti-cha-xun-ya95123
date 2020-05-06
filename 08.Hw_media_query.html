@@ -12,32 +12,32 @@
             list-style: none;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, '微軟正黑體';
+            font-size: 0px;
         }
-
-        body {
-            height: 100%;
-        }
-
-        hr {
-            margin: 4.5vmin 0;
-        }
-
-        #container {
-            width: 90%;
-            margin: 4.5vmin auto;
-        }
-
-        /* #first img {
-            width: ;
-        } */
 
         @media (max-width: 575px) {
+
+            html,
+            body {
+                height: 100%;
+            }
+
+            hr {
+                margin: 4.5vmin 0;
+            }
+
+            #container {
+                width: 90%;
+                margin: 4.5vmin auto;
+            }
+
             .box {
                 width: 100%;
                 /* border: 1px solid #000; */
             }
 
             #first {
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -80,8 +80,6 @@
                 margin-top: 5vmin;
             }
 
-
-
             h2 {
                 font-size: 5vmin;
                 margin: 1vmin 0;
@@ -90,6 +88,142 @@
             span {
                 font-size: 3vmin;
             }
+        }
+
+        @media (min-width: 576px) {
+
+            html,
+            body {
+                width: 100vw;
+                height: 100vh;
+            }
+
+            #container {
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                position: relative;
+                display: flex;
+            }
+
+            hr {
+                border: 0px;
+            }
+
+            /* 盒子大小 */
+            #container .box:nth-of-type(1) {
+                width: 60vmin;
+            }
+
+            .box {
+                width: 17vmin;
+                /* background: #ffa; */
+
+                text-align: center;
+            }
+
+            /* 圖片大小 */
+            #first img {
+                width: 50%;
+
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            /* 文字 */
+            h1 {
+                font-size: 4.3vmin;
+                font-weight: bolder;
+                margin-top: 1vmin;
+            }
+
+            h2 {
+                font-size: 2.85vmin;
+            }
+
+            #first h2 {
+                font-size: 3.12vmin;
+                font-weight: bolder;
+                margin: 1vmin 0;
+            }
+
+            #first span {
+                font-size: 2vmin;
+                font-weight: 550;
+                margin-bottom: 3vmin;
+            }
+
+            /* 定位 */
+            #container .box:nth-of-type(1) {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -40%);
+            }
+
+            #container .box:nth-of-type(2) {
+                position: absolute;
+                left: 5%;
+                top: 5%;
+                transform: translate(-5%, -5%);
+            }
+
+            /* line */
+            #container .box:nth-of-type(2)::after {
+                content: '';
+                width: 29vw;
+                border-top: 0.16vmin solid #ccc;
+                position: absolute;
+                left: 95%;
+                top: 115%;
+                transform: rotate(18deg);
+            }
+
+            #container .box:nth-of-type(3) {
+                position: absolute;
+                left: 28%;
+                top: 1%;
+                transform: translate(-28%, -1%);
+            }
+
+            #container .box:nth-of-type(4) {
+                position: absolute;
+                right: 20%;
+                top: 2%;
+                transform: translate(-20%, -2%);
+            }
+
+            #container .box:nth-of-type(5) {
+                position: absolute;
+                right: 5%;
+                top: 30%;
+                transform: translate(-5%, -30%);
+            }
+
+            #container .box:nth-of-type(6) {
+                position: absolute;
+                right: 12%;
+                bottom: 20%;
+                transform: translate(-12%, -20%);
+            }
+
+            #container .box:nth-of-type(7) {
+                position: absolute;
+                left: 25%;
+                bottom: 3%;
+                transform: translate(-25%, -3%);
+            }
+
+            #container .box:nth-of-type(8) {
+                position: absolute;
+                left: 9%;
+                bottom: 24%;
+                transform: translate(-9%, -24%);
+            }
+
+
         }
     </style>
 </head>
