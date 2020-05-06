@@ -30,11 +30,59 @@
         @media (max-width: 575px) {
             .box {
                 width: 100%;
+                /* border: 1px solid #000; */
+            }
 
+            #first {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+            }
+
+            #first img {
+                max-width: 60%;
+                /* 把剩餘部分占滿， flex 就會自動幫你換行囉 */
+                margin: 0 50%;
+            }
+
+            #first span {
+                margin-bottom: 1.2rem;
             }
 
             img {
                 max-width: 50%;
+                /* 
+                圖片不能直接用
+                margin: auto;
+                但可以再父層使用 text-align:center;
+                因為 img 是相當於 inline-block
+                 */
+                display: block;
+                margin: auto;
+            }
+
+            .imgt1 {
+                margin-top: 3rem;
+            }
+
+            .imgt2 {
+                margin-top: 1.3rem;
+            }
+
+            h1 {
+                font-size: 2.7rem;
+                margin: 0 10% 1rem 10%;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+                margin: 0.3rem 0;
+            }
+
+            span {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -43,10 +91,12 @@
 <body>
     <div id="container">
         <div class="box">
-            <img src="./images/wda.png" alt="">
-            <h1>泰山職訓局</h1>
-            <h2>從零開始的網頁設計課程</h2>
-            <span>轉職網頁開發人員　掌握就業必備技能<br>由淺入深學習技術　強化職場的競爭力</span>
+            <div id="first">
+                <img src="./images/wda.png" alt="">
+                <h1>泰山職訓局</h1>
+                <h2>從零開始的網頁設計課程</h2>
+                <span>轉職網頁開發人員　掌握就業必備技能<br>由淺入深學習技術　強化職場的競爭力</span>
+            </div>
         </div>
         <hr>
         <div class="box">
@@ -71,7 +121,7 @@
         </div>
         <hr>
         <div class="box">
-            <img src="./images/sass.png" alt="">
+            <img class="imgt1" src="./images/sass.png" alt="">
             <h2>Sass</h2>
             <span>Sass（英文全稱：Syntactically Awesome Stylesheets）是一個最初由Hampton Catlin設計並由Natalie
                 Weizenbaum開發的層疊樣式表語言。在開發最初版本之後，Weizenbaum和Chris
@@ -79,14 +129,14 @@
         </div>
         <hr>
         <div class="box">
-            <img src="./images/vue.png" alt="">
+            <img class="imgt1" src="./images/vue.png" alt="">
             <h2>Vue.js</h2>
             <span>Vue.js（/vjuː/，或簡稱為Vue）是一個用於建立使用者介面的開源JavaScript框架，也是一個建立單頁應用的Web應用框架[4]。
                 2016年一項針對JavaScript的調查表明，Vue有著89%的開發者滿意度。在GitHub上，該專案平均每天能收穫95顆星，為Github有史以來星標數第3多的專案。</span>
         </div>
         <hr>
         <div class="box">
-            <img src="./images/jq.png" alt="">
+            <img class="imgt2" src="./images/jq.png" alt="">
             <h2>jQuery</h2>
             <span>jQuery是一套跨瀏覽器的JavaScript函式庫，簡化HTML與JavaScript之間的操作。由約翰·雷西格（John Resig）在2006年1月的BarCamp
                 NYC上釋出第一個版本。目前是由Dave Methvin領導的開發團隊進行開發。全球前10,000個存取最高的網站中，有65%使用了jQuery，是目前最受歡迎的JavaScript函式庫。</span>
